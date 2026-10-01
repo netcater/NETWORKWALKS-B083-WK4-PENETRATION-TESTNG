@@ -20,21 +20,6 @@ This engagement was broken into four milestones:
 | [M3](milestones/M3-data-exposure.md) | Identify a further critical data exposure (staff salaries + shareholder records) | ✅ Complete |
 | [M4](milestones/M4-full-pentest-report.md) | Full penetration testing report | ✅ Complete |
 
-## Repository structure
-
-```
-mediroza-pentest-report/
-├── README.md
-├── milestones/
-│   ├── M1-recon-and-access.md
-│   ├── M2-password-cracking.md
-│   ├── M3-data-exposure.md
-│   └── M4-full-pentest-report.md
-└── evidence/
-    ├── m1-recon-and-access/      # recon output, SQLi payloads, access-granted proof
-    ├── m2-password-cracking/     # password-protected PDFs + cracked passwords + recovered reports
-    └── m3-data-exposure/         # exposed SQL backup containing staff salary & shareholder data
-```
 
 ## Summary of findings
 
@@ -44,16 +29,3 @@ mediroza-pentest-report/
 
 See [M4-full-pentest-report.md](milestones/M4-full-pentest-report.md) for the complete writeup, risk ratings, and remediation steps.
 
-## How to publish this repo to GitHub
-
-```bash
-cd mediroza-pentest-report
-git init
-git add .
-git commit -m "Initial commit: Mediroza General Hospital pentest report"
-git branch -M main
-git remote add origin https://github.com/<your-username>/mediroza-pentest-report.git
-git push -u origin main
-```
-
-> If any of the evidence images contain data you don't want public, set the repo to **Private** when creating it on GitHub, or add the `evidence/` folder to `.gitignore` before your first commit.
