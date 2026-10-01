@@ -27,5 +27,5 @@ This engagement was broken into four milestones:
 2. **Weak PDF Encryption (High)**: The 3 retrieved lab report PDFs were protected with weak, dictionary-guessable passwords (`123456`, `password`, and a short symbol string), all cracked via dictionary/wordlist attack against the PDF's `$pdf$` hash.
 3. **Sensitive Data Exposure — Public Database Backup (Critical)**: An old `.sql` database backup file was found exposed on the server, containing full staff records (names, national ID numbers, salaries, contact details) and confidential shareholder/ownership data for the hospital.
 
-See [M4-full-pentest-report.md](milestones/M4-full-pentest-report.md) for the complete writeup, risk ratings, and remediation steps.
+See [M4-full-pentest-report.md](M4-full-pentest-report.md) for the complete writeup, risk ratings, and remediation steps.
 
