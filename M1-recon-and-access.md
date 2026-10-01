@@ -13,6 +13,10 @@ Initial fingerprinting was performed against `medirozahospital.com`:
 
 **Evidence:** `evidence/m1-recon-and-access/recon1.PNG`, `recon2.PNG`
 
+![image](recon1.PNG)
+
+![image](recon2.PNG)
+
 ### Key takeaway
 The CMS version disclosure (`Mediroza CMS 1.4.2`) is itself a minor information-disclosure finding — it narrows the search for known vulnerabilities/exploits against that specific CMS version.
 
@@ -40,6 +44,8 @@ This confirms:
 
 **Evidence:** `evidence/m1-recon-and-access/SQLinjection.PNG`
 
+![image](SQLinjection.PNG)
+
 ## 4. Exploiting the SQL injection — Authentication bypass
 
 Based on the error behavior, a classic comment-based SQL injection authentication bypass payload was submitted in the Username field:
@@ -62,6 +68,8 @@ SELECT * FROM users WHERE username = 'admin' --'
 
 **Evidence:** `evidence/m1-recon-and-access/testingSQLinjection.PNG`
 
+![image](testingSQLinjection.PNG)
+
 ## 5. Gaining unauthorized access
 
 Submitting the payload successfully bypassed authentication and granted access to the restricted **Patient Portal** area, which lists another patient's confidential lab reports:
@@ -73,6 +81,8 @@ Submitting the payload successfully bypassed authentication and granted access t
 All three reports were downloaded as encrypted/password-protected PDFs.
 
 **Evidence:** `evidence/m1-recon-and-access/accessGranted.PNG`
+
+![image](accessGranted.PNG)
 
 ## Deliverable
 
